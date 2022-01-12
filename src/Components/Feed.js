@@ -2,8 +2,8 @@ import React from "react";
 import styles from "./Feed.module.css";
 const Feed = ({ data, img, descri, dataPost }) => {
   return (
-    <div className={styles.feed}>
-      <div className={styles.content}>
+    <div className={`${styles.feed}`}>
+      <div className={`${styles.content} animeLeft`}>
         <div className={styles.title}>
           <h1>{data.title}</h1>
         </div>
@@ -12,13 +12,11 @@ const Feed = ({ data, img, descri, dataPost }) => {
             <img src={img} />
           </div>
         )}
-
         {dataPost && (
           <div className={styles.data}>
-            <h3>{dataPost}</h3>
+            <h3>Date: {dataPost}</h3>
           </div>
         )}
-
         {descri && (
           <div className={styles.descri}>
             <p>{descri}</p>

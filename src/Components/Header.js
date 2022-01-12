@@ -5,8 +5,8 @@ import Link from "next/link";
 import styles from "./Header.module.css";
 const Header = () => {
   return (
-    <div className={styles.header}>
-      <div className={styles.logo}>
+    <div className={`${styles.header} animeLeft`}>
+      <div className={styles.logo} id="logo">
         <Link href="/">
           <a>
             <Image src={logo} width={100} height={100} />
@@ -27,6 +27,9 @@ const Header = () => {
               </a>
             </Link>
           </ul>
+        </div>
+        <div className={styles.button}>
+          <button></button>
         </div>
       </div>
     </div>

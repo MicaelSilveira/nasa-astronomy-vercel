@@ -3,9 +3,6 @@
   justify-content: center;
   align-items: flex-start;
   font-size: 20px;
-  /* position: absolute;
-  bottom: 20px;
-  margin-left: 20px; */
 }
 .today {
   font-size: 20px;
@@ -16,6 +13,7 @@
   border-bottom-right-radius: 10px;
   box-shadow: 0px 5px 5px 0px #333;
   color: #333;
+  z-index: 2000;
 }
 @media (max-width: 45rem) {
   .today {
@@ -29,6 +27,6 @@
 .moreInfor a {
   color: black;
 }
-.today:hover {
-  background: white;
+.today:hover h3 {
+  color: tomato;
 }

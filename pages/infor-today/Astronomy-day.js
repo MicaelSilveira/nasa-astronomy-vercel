@@ -1,20 +1,25 @@
 import React from "react";
-import styles from "../../styles/Astronomy-day.module.css";
 import Feed from "../../src/Components/Feed";
+import Head from "next/head";
 
 const AstronomyDay = ({ data_Astronomy_day }) => {
   console.log(data_Astronomy_day);
   return (
-    <div>
-      {data_Astronomy_day && (
-        <Feed
-          data={data_Astronomy_day}
-          img={data_Astronomy_day.hdurl}
-          descri={data_Astronomy_day.explanation}
-          dataPost={data_Astronomy_day.date}
-        />
-      )}
-    </div>
+    <>
+      <div>
+        <Head>
+          <title>Nasa | Today</title>
+        </Head>
+        {data_Astronomy_day && (
+          <Feed
+            data={data_Astronomy_day}
+            img={data_Astronomy_day.hdurl}
+            descri={data_Astronomy_day.explanation}
+            dataPost={data_Astronomy_day.date}
+          />
+        )}
+      </div>
+    </>
   );
 };
 
