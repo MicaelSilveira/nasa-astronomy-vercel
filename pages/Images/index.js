@@ -5,7 +5,7 @@ import FeedLibrary from "../../src/Components/FeedImagesLibrary/FeedLibrary";
 import Loading from "../../src/Loading";
 import { useRouter } from "next/router";
 import Head from "next/head";
-const index = () => {
+const ImageHome = () => {
   const [pageStats, setPageStats] = React.useState(44);
   const { request, dataFetch, loadingFetch } = useFetch();
   const router = useRouter();
@@ -27,4 +27,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default ImageHome;
