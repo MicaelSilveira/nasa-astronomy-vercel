@@ -13,7 +13,7 @@ const AstronomyDay = ({ data_Astronomy_day }) => {
         {data_Astronomy_day && (
           <Feed
             data={data_Astronomy_day}
-            img={data_Astronomy_day.hdurl}
+            img={data_Astronomy_day.url}
             descri={data_Astronomy_day.explanation}
             dataPost={data_Astronomy_day.date}
           />
