@@ -5,12 +5,12 @@ import React from "react";
 import Footer from "../src/Components/Footer";
 function MyApp({ Component, pageProps }) {
   const [data_Astronomy_day, setAstronomy_day] = React.useState(null);
-  const request = React.useCallback(async function () {
-    const response = await fetch(API_ASTRONOMY_DAY);
-    const data = await response.json();
-    setAstronomy_day(data);
-  });
   React.useEffect(() => {
+    async function request() {
+      const response = await fetch(API_ASTRONOMY_DAY);
+      const data = await response.json();
+      setAstronomy_day(data);
+    }
     request();
   }, []);
   return (

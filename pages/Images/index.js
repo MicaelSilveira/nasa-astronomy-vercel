@@ -9,11 +9,11 @@ const index = () => {
   const [pageStats, setPageStats] = React.useState(44);
   const { request, dataFetch, loadingFetch } = useFetch();
   const router = useRouter();
-  const requestFetch = React.useCallback(async function () {
-    await request(`${API_IMAGES_LIBRARY_PAGE}${pageStats}`);
-  });
-  React.useEffect(async () => {
-    await requestFetch();
+  React.useEffect(() => {
+    async function requestFetch() {
+      await request(`${API_IMAGES_LIBRARY_PAGE}${pageStats}`);
+    }
+    requestFetch();
   }, [router]);
   console.log(dataFetch);
   return (
