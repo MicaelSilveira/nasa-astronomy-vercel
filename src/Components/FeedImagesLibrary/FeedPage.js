@@ -1,13 +1,19 @@
 import React from "react";
 import styles from "./FeedPage.module.css";
-const FeedPage = () => {
+const FeedPage = ({ setPageStats }) => {
+  function previosClick() {
+    setPageStats((page) => page - 1);
+  }
+  function nextClick() {
+    setPageStats((page) => page + 1);
+  }
   return (
     <div className={styles.feedPage}>
-      <div className={styles.next}>
-        <button>Next</button>
-      </div>
       <div className={styles.previous}>
-        <button>Previous</button>
+        <button onClick={previosClick}>Previous</button>
+      </div>
+      <div className={styles.next}>
+        <button onClick={nextClick}>Next</button>
       </div>
     </div>
   );

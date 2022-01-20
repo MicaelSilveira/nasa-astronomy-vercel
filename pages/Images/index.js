@@ -22,7 +22,9 @@ const ImageHome = () => {
         <title>Nasa | Images</title>
       </Head>
       {loadingFetch && <Loading />}
-      {dataFetch && <FeedLibrary date={dataFetch} />}
+      {dataFetch && (
+        <FeedLibrary setPageStats={setPageStats} date={dataFetch} />
+      )}
     </div>
   );
 };
