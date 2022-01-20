@@ -14,7 +14,7 @@ const ImageHome = () => {
       await request(`${API_IMAGES_LIBRARY_PAGE}${pageStats}`);
     }
     requestFetch();
-  }, [router]);
+  }, [pageStats]);
   console.log(dataFetch);
   return (
     <div>
