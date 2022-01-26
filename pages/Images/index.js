@@ -10,6 +10,9 @@ const ImageHome = () => {
   React.useEffect(() => {
     async function requestFetch() {
       await request(`${API_IMAGES_LIBRARY_PAGE}${pageStats}`);
+      window.scrollTo({
+        top: 0,
+      });
     }
     requestFetch();
   }, [pageStats]);
