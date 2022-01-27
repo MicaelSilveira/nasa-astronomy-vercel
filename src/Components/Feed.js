@@ -20,7 +20,7 @@ const Feed = ({ data, img, descri, dataPost }) => {
             ></iframe>
           </div>
         )}
-        {!data.media_type === "video" && (
+        {data.media_type === "image" && (
           <div className={styles.img}>
             <img src={img} />
           </div>

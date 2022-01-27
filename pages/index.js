@@ -19,7 +19,6 @@ const Home = ({ data_Astronomy_day }) => {
         {data_Astronomy_day && (
           <Feed
             data={data_Astronomy_day}
-            today={true}
             img={data_Astronomy_day.url}
             descri={
               "For more information about today's post click on Astronomy of the Day"
