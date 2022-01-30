@@ -2,7 +2,12 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import Feed from "../src/Components/Feed";
-const Home = ({ data_Astronomy_day }) => {
+import Loading from "../src/Loading";
+const Home = ({
+  data_Astronomy_day,
+  loading_Astronomy_day,
+  error_Astronomy_dat,
+}) => {
   return (
     <>
       <div>
@@ -16,6 +21,8 @@ const Home = ({ data_Astronomy_day }) => {
             </a>
           </Link>
         </div>
+        {loading_Astronomy_day && <Loading />}
+        {error_Astronomy_dat && <h2>{error_Astronomy_dat}</h2>}
         {data_Astronomy_day && (
           <Feed
             data={data_Astronomy_day}
