@@ -12,7 +12,7 @@ const Home = ({
     <>
       <div>
         <Head>
-          <title>Nasa | Home</title>
+          <title>nasa astronomy</title>
         </Head>
         <div>
           <Link href="/infor-today/Astronomy-day">
