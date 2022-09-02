@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./Feed.module.css";
 const Feed = ({ data, img, descri, dataPost }) => {
   return (
