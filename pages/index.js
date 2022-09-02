@@ -1,8 +1,8 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import Feed from "../src/Components/Feed";
 import Loading from "../src/Loading";
+import styles from "../styles/Home.module.css";
 const Home = ({
   data_Astronomy_day,
   loading_Astronomy_day,
